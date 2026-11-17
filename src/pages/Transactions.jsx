@@ -5,7 +5,7 @@ export default function Transactions() {
   const [transactions, setTransactions] = useState([]);
 
   useEffect(() => {
-    transactionApi.get('/')
+    transactionApi.get('')
       .then(res => setTransactions(res.data))
       .catch(err => console.error("Erreur API Transaction:", err));
   }, []);

@@ -5,7 +5,7 @@ export default function Customers() {
   const [customers, setCustomers] = useState([]);
 
   useEffect(() => {
-    customerApi.get('/')
+    customerApi.get('')
       .then(res => setCustomers(res.data))
       .catch(err => console.error("Erreur API Client:", err));
   }, []);
